@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Site do centro-Oeste</title>
+</head>
+<body> 
+    <header>
+        <h1>Site do Centro-Oeste</h1>
+        <nav>            
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Home <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./index.html#home-centroOeste">Centro-Oeste</a>
+                    <a href="./index.html#home-historia">História</a>
+                    <a href="./index.html#home-curiosidades">Curiosidades</a>
+                    <a href="./index.html#home-grandesNomes">Grandes Nomes</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Notícias <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/noticias.html#noticias-politica">Política</a>
+                    <a href="./html/noticias.html#noticias-economia">Economia</a>
+                    <a href="./html/noticias.html#noticias-meioAmbiente">Meio Ambiente</a>
+                    <a href="./html/noticias.html#noticias-agropecuaria">Agropecuária</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Costumes <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/costumes.html#costumes-girias">Gírias Tradicionais</a>
+                    <a href="./html/costumes.html#costumes-lingua">Influências Linguísticas</a>
+                    <a href="./html/costumes.html#costumes-festas">Festas Tradicionais</a>
+                    <a href="./html/costumes.html#costumes-religiao">Religião</a>
+                    <a href="./html/costumes.html#costumes-esporte">Esporte</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Cultura <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/cultura.html#cultura-musica">Música</a>
+                    <a href="./html/cultura.html#cultura-danca">Danças Típicas</a>
+                    <a href="./html/cultura.html#cultura-gastronomia">Gastronomia</a>
+                    <a href="./html/cultura.html#cultura-artesanato">Artesanato</a>
+                    <a href="./html/cultura.html#cultura-literatura">Literatura</a>
+                    <a href="./html/cultura.html#cultura-folclore">Folclore e Lendas</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Turismo <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/turismo.html#turismo-roteiros">Roteiros</a>
+                    <a href="./html/turismo.html#turismo-hospedagem">Hospedagem</a>
+                    <a href="./html/turismo.html#turismo-eventos">Eventos</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Natureza <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu align-right">
+                    <a href="./html/natureza.html#natureza-fauna">Fauna</a>
+                    <a href="./html/natureza.html#natureza-flora">Flora</a>
+                    <a href="./html/natureza.html#natureza-parques">Parques e Reservas</a>
+                    <a href="./html/natureza.html#natureza-preservacao">Preservação</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="./html/radio.html#radio">Rádio</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="turismo-roteiros">
+        <h2>Roteiros</h2>
+
+        <!-- Barra de busca -->
+        <div class="map-search">
+            <input type="text" id="map-search-input" placeholder="Buscar local no mapa...">
+            <button id="map-search-btn">Buscar</button>
+        </div>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+
+        <!-- Cards de destinos pré-prontos -->
+        <h3>Destinos sugeridos</h3>
+        <div class="destinos-grid">
+
+            <div class="destino-card" data-lat="-15.798038395523946" data-lng="-47.875535976175314" data-zoom="19">
+                <img src="https://luporai.com.br/wp-content/uploads/2023/11/20231027_080354-1140x641.jpg" alt="Catedral Metropolitana de Brasília (DF)">
+                <div class="destino-info">
+                    <h4>Catedral Metropolitana Nossa Senhora Aparecida(DF)</h4>
+                    <p>Projetada por Oscar Niemeyer, é um marco arquitetônico com colunas curvas e vitrais em tons de azul.</p>
+                </div> 
+            </div>
+
+            <div class="destino-card" data-lat="-15.79945379732676" data-lng="-47.864216549192484" data-zoom="19">
+                <img src="https://images.adsttc.com/media/images/55f6/4cf6/e58e/cec1/f800/0085/medium_jpg/ANDREW-PROKOS-BRASILIA-9180-C.jpg?1442204914" alt="Congresso Nacional (DF)">             
+                <div class="destino-info">
+                    <h4>Congresso Nacional (DF)</h4>
+                    <p>Sede do poder legislativo federal, com os famosos domos voltados para cima e para baixo.</p>
+                </div>
+            </div>
+
+            <div class="destino-card" data-lat="-15.803159657217918" data-lng="-47.86081238437434" data-zoom="19">
+                <img src="https://vice.df.gov.br/documents/d/vice/bsb-60-anos-69-1620x1080-jpg" alt="Praça dos Três Poderes (DF)">             
+                <div class="destino-info">
+                    <h4>Praça dos Três Poderes (DF)</h4>
+                    <p>Espaço monumental que abriga o Palácio do Planalto, o STF e o Congresso.</p>
+                </div>
+            </div>
+
+            <div class="destino-card" data-lat="-15.79299876712154" data-lng="-47.82214083384791" data-zoom="19">
+                <img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/palacios-e-residencias/palacio-da-alvorada/galeria-de-imagens/palacio-da-alvorada-14.jpg/@@images/image" alt="Palácio da Alvorada (DF)">             
+                <div class="destino-info">
+                    <h4>Palácio da Alvorada (DF)</h4>
+                    <p>Residência oficial da presidência da República, famoso por suas linhas curvas e colunas.</p>
+                </div>
+            </div>
+
+            <div class="destino-card" data-lat="-15.808673166252024" data-lng="-47.82765718118266" data-zoom="19">
+                <img src="https://nautica.com.br/wp-content/uploads/2024/07/visitar-brasilia-2.bx_.jpg" alt="Lago Paranoá (DF)">             
+                <div class="destino-info">
+                    <h4>Lago Paranoá (DF)</h4>
+                    <p>Lago artificial que banha a capital, ideal para passeios de barco e prática de esportes náuticos.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>  
+        <p>
+            Desenvolvido por: Katarina Freire Silva, Luis Felipe Novais Conrado, Manuela Teixeira de Oliveira, Rodrigo Ramos Ribeiro, Sarah da Conceição Lamas Bento.
+        </p>
+        <p>
+            Copyright © 2026 Site do Centro-Oeste. Todos os direitos reservados. Taboão da Serra, São Paulo - Brasil.
+        </p>
+    </footer>
+</body>
+</html>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../script.js"></script>
