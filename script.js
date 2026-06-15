@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ano: 1991,
             arquivo: "../music/ZL---A-Estrela-Só.mp3"
         },
-                {
+        {
             titulo: "Pouco a Pouco",
             artista: "Zezé Di Camargo & Luciano",
             ano: 1991,
@@ -185,6 +185,77 @@ document.addEventListener("DOMContentLoaded", () => {
             ano: 1991,
             arquivo: "../music/ZL---Para-Desbotar-a-Saudade.mp3"
         },
+
+
+        {
+            titulo: "Cade Você",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Cade-Você.mp3"
+        },
+                {
+            titulo: "Talvez Você Se Lembre",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Talvez-Você-Se-Lembre.mp3"
+        },
+        {
+            titulo: "O Cheiro da Maça",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---O-Cheiro-da-Maça.mp3"
+        },
+        {
+            titulo: "Coração Quer Te Encontrar",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Coração-Quer-Te-Encontrar.mp3"
+        },
+        {
+            titulo: "Mais uma Vez Sozinho (Marcas do Amor)",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Mais-uma-Vez-Sozinho-(Marcas-do-Amor).mp3"
+        },
+        {
+            titulo: "Pra Nunca Dizer Adeus",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Pra-Nunca-Dizer-Adeus.mp3"
+        },
+        {
+            titulo: "Pense em Mim",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Pense-em-Mim.mp3"
+        },
+        {
+            titulo: "Só Fazendo Amor",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Só-Fazendo-Amor.mp3"
+        },
+        {
+            titulo: "Você Ainda Vai Voltar",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Você-Ainda-Vai-Voltar.mp3"
+        },
+        {
+            titulo: "Desculpe Mas Eu Vou Chorar",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Desculpe-Mas-Eu-Vou-Chorar.mp3"
+        },
+
+        {
+            titulo: "Cade Você",
+            artista: "Leandro e Leonardo",
+            ano: 1990,
+            arquivo: "../music/LL---Cade-Você.mp3"
+        },
+
+
     ];
 
     // ----- ELEMENTOS -----
