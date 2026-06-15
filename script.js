@@ -249,13 +249,65 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         {
-            titulo: "Cade Você",
-            artista: "Leandro e Leonardo",
-            ano: 1990,
-            arquivo: "../music/LL---Cade-Você.mp3"
+            titulo: "Logo Eu",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Logo-Eu.mp3"
         },
-
-
+                {
+            titulo: "Molhando o Volante",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Molhando-o-Volante.mp3"
+        },
+        {
+            titulo: "Troca",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Troca.mp3"
+        },
+        {
+            titulo: "Duas Metades",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Duas-Metades.mp3"
+        },
+        {
+            titulo: "Tem Que Sorrir",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Tem-Que-Sorrir.mp3"
+        },
+        {
+            titulo: "Namorando Com Saudade",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Namorando-Com-Saudade.mp3"
+        },
+        {
+            titulo: "Paradigmas",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Paradigmas.mp3"
+        },
+        {
+            titulo: "Namora Eu Aí",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Namora-Eu-Aí.mp3"
+        },
+        {
+            titulo: "A Gente Nem Ficou",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---A-Gente-Nem-Ficou.mp3"
+        },
+        {
+            titulo: "Louca de Saudade",
+            artista: "Jorge e Mateus",
+            ano: 2022,
+            arquivo: "../music/JM---Louca-de-Saudade.mp3"
+        },
     ];
 
     // ----- ELEMENTOS -----
