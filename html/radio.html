@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Site do centro-Oeste</title>
+</head>
+<body> 
+    <header>
+        <h1>Site do Centro-Oeste</h1>
+        <nav>            
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Home <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./index.html#home-centroOeste">Centro-Oeste</a>
+                    <a href="./index.html#home-historia">História</a>
+                    <a href="./index.html#home-curiosidades">Curiosidades</a>
+                    <a href="./index.html#home-grandesNomes">Grandes Nomes</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Notícias <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/noticias.html#noticias-politica">Política</a>
+                    <a href="./html/noticias.html#noticias-economia">Economia</a>
+                    <a href="./html/noticias.html#noticias-meioAmbiente">Meio Ambiente</a>
+                    <a href="./html/noticias.html#noticias-agropecuaria">Agropecuária</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Costumes <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/costumes.html#costumes-girias">Gírias Tradicionais</a>
+                    <a href="./html/costumes.html#costumes-lingua">Influências Linguísticas</a>
+                    <a href="./html/costumes.html#costumes-festas">Festas Tradicionais</a>
+                    <a href="./html/costumes.html#costumes-religiao">Religião</a>
+                    <a href="./html/costumes.html#costumes-esporte">Esporte</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Cultura <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/cultura.html#cultura-musica">Música</a>
+                    <a href="./html/cultura.html#cultura-danca">Danças Típicas</a>
+                    <a href="./html/cultura.html#cultura-gastronomia">Gastronomia</a>
+                    <a href="./html/cultura.html#cultura-artesanato">Artesanato</a>
+                    <a href="./html/cultura.html#cultura-literatura">Literatura</a>
+                    <a href="./html/cultura.html#cultura-folclore">Folclore e Lendas</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Turismo <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="./html/turismo.html#turismo-roteiros">Roteiros</a>
+                    <a href="./html/turismo.html#turismo-hospedagem">Hospedagem</a>
+                    <a href="./html/turismo.html#turismo-eventos">Eventos</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="dropdown-toggle">
+                    Natureza <span class="arrow">▾</span>
+                </button>
+                <div class="dropdown-menu align-right">
+                    <a href="./html/natureza.html#natureza-fauna">Fauna</a>
+                    <a href="./html/natureza.html#natureza-flora">Flora</a>
+                    <a href="./html/natureza.html#natureza-parques">Parques e Reservas</a>
+                    <a href="./html/natureza.html#natureza-preservacao">Preservação</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a href="./html/radio.html#radio">Rádio</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="radio">
+        <h2>Rádio Centro-Oeste</h2>
+
+        <div class="radio-player">
+
+            <!-- Disco giratório -->
+            <div class="disco-wrapper">
+                <div class="disco" id="disco">
+                    <div class="disco-furo"></div>
+                </div>
+            </div>
+
+            <!-- Informações da música -->
+            <div class="musica-info">
+                <h3 id="info-titulo">Selecione uma música</h3>
+                <p id="info-artista">Artista: --</p>
+                <p id="info-ano">Lançamento: --</p>
+            </div>
+
+            <!-- Controles -->
+            <div class="player-controls">
+                <button id="btn-anterior" title="Anterior">⏮</button>
+                <button id="btn-play" title="Tocar/Pausar">▶</button>
+                <button id="btn-proximo" title="Próxima">⏭</button>
+            </div>
+
+            <!-- Barra de progresso -->
+            <div class="progress-container">
+                <span id="tempo-atual">0:00</span>
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <span id="tempo-total">0:00</span>
+            </div>
+
+            <!-- Volume -->
+            <div class="volume-container">
+                <label for="volume">🔊</label>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+            </div>
+
+        </div>
+
+        <!-- Filtros -->
+        <div class="radio-filtros">
+            <h3>Selecionar música</h3>
+
+            <div class="filtro-grupo">
+                <label for="filtro-artista">Artista:</label>
+                <select id="filtro-artista">
+                    <option value="">Todos</option>
+                </select>
+
+                <label for="filtro-ano">Ano:</label>
+                <select id="filtro-ano">
+                    <option value="">Todos</option>
+                </select>
+
+                <button id="btn-filtrar">Buscar músicas</button>
+            </div>
+
+            <!-- Lista de músicas (resultado do filtro ou todas) -->
+            <ul id="lista-musicas"></ul>
+        </div>
+
+    </section>
+
+    <audio id="audio-player"></audio>
+
+    <footer>
+        
+        <p>
+            Desenvolvido por: Katarina Freire Silva, Luis Felipe Novais Conrado, Manuela Teixeira de Oliveira, Rodrigo Ramos Ribeiro, Sarah da Conceição Lamas Bento.
+        </p>
+        <p>
+            Copyright © 2026 Site do Centro-Oeste. Todos os direitos reservados. Taboão da Serra, São Paulo - Brasil.
+        </p>
+    </footer>
+</body>
+</html>
+<script src="../script.js"></script>
