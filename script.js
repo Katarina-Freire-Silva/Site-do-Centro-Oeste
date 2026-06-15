@@ -430,6 +430,67 @@ document.addEventListener("DOMContentLoaded", () => {
             ano: 2015,
             arquivo: "../music/HJ---Aquela-Pessoa.mp3"
         },
+
+        {
+            titulo: "Narcisista",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Narcisista.mp3"
+        },
+                {
+            titulo: "Melhor Terminar",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Melhor-Terminar.mp3"
+        },
+        {
+            titulo: "Saudade do Tipo",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Saudade-do-Tipo.mp3"
+        },
+        {
+            titulo: "Todo Mundo Menos Você",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Todo-Mundo-Menos-Você.mp3"
+        },
+        {
+            titulo: "Medo Bobo",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Medo-Bobo.mp3"
+        },
+        {
+            titulo: "Amando o Inimigo",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Amando-o-Inimigo.mp3"
+        },
+        {
+            titulo: "Surtos",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Surtos.mp3"
+        },
+        {
+            titulo: "Esqueça-me Se For Capaz",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Esqueça-me-Se-For-Capaz.mp3"
+        },
+        {
+            titulo: "Quero do Jeito Que Você Quiser",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Quero-do-Jeito-Que-Você-Quiser.mp3"
+        },
+        {
+            titulo: "Eu Sou Ela",
+            artista: "Maiara e Maraisa",
+            ano: 2024,
+            arquivo: "../music/MM---Eu-Sou-Ela.mp3"
+        },
     ];
 
     // ----- ELEMENTOS -----
