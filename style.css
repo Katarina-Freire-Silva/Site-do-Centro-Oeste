@@ -250,23 +250,23 @@ section{
 
 /* Disco giratório */
 .disco-wrapper{
-    width: 440px;
-    height: 440px;
+    width: 550px;
+    height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .disco{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     background: repeating-radial-gradient(
         circle,
-        #222 0px,
+        #222 1.5px,
         #222 4px,
         #444 5px,
-        #444 9px
+        #222 6px
     );
     display: flex;
     align-items: center;
