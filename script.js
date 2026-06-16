@@ -552,6 +552,127 @@ document.addEventListener("DOMContentLoaded", () => {
             ano: 1987,
             arquivo: "../music/NM---Homem-Com-H.mp3"
         },
+
+        {
+            titulo: "Amanheceu Peguei a Viola",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Amanheceu-Peguei-a-Viola.mp3"
+        },
+        {
+            titulo: "Ando Devagar",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Ando-Devagar.mp3"
+        },
+        {
+            titulo: "Brasil Poeira",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Brasil-Poeira.mp3"
+        },
+        {
+            titulo: "Boi de Piranha",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Boi-de-Piranha.mp3"
+        },
+        {
+            titulo: "Boiada",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Boiada.mp3"
+        },
+        {
+            titulo: "Caminhos Me Levem",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Caminhos-Me-Levem.mp3"
+        },
+        {
+            titulo: "Cavaleiro da Lua",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Cavaleiro-da-Lua.mp3"
+        },
+        {
+            titulo: "Corumba",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Corumba.mp3"
+        },
+        {
+            titulo: "Flor do Amor",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Flor-do-Amor.mp3"
+        },
+        {
+            titulo: "Lamento Sertanejo",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Lamento-Sertanejo.mp3"
+        },
+        {
+            titulo: "Luzeiro",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Luzeiro.mp3"
+        },
+        {
+            titulo: "Minas Gerais",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Minas-Gerais.mp3"
+        },
+        {
+            titulo: "Peão",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Peão.mp3"
+        },
+        {
+            titulo: "Rasta Bonito",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Rasta-Bonito.mp3"
+        },
+        {
+            titulo: "Sabor das Manhãs",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Sabor-das-Manhãs.mp3"
+        },
+        {
+            titulo: "Trem do Pantanal",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Trem-do-Pantanal.mp3"
+        },
+        {
+            titulo: "Senhores da Terra",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Senhores-da-Terra.mp3"
+        },
+        {
+            titulo: "Hora do Clarão",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Hora-do-Clarão.mp3"
+        },
+        {
+            titulo: "Missões Naturais",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Missões-Naturais.mp3"
+        },
+        {
+            titulo: "Travessia do Rio Araguaia",
+            artista: "Almir Sater",
+            ano: 1990,
+            arquivo: "../music/AS---Travessia-do-Rio-Araguaia.mp3"
+        },
     ];
 
     // ----- ELEMENTOS -----
