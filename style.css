@@ -1,3 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+.bricolage-grotesque {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
 /* ================================================================
    PALETA DE CORES — SITE DO CENTRO-OESTE
    ================================================================ */
@@ -39,6 +50,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .material-symbols-outlined {
@@ -81,7 +93,7 @@ footer {
     align-items: center;
     background-color: var(--cor-siena);
     color: var(--cor-areia);
-    padding: 30px;
+    padding: 10px;
     width: 100%;
     font-size: 12px;
     margin-top: auto;
