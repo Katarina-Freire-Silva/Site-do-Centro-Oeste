@@ -562,13 +562,27 @@ document.addEventListener("DOMContentLoaded", () => {
         grid.innerHTML = "";
 
         const query = encodeURIComponent(termosBusca[estado]);
-        const url = `https://gnews.io/api/v4/search?q=${query}&lang=pt&country=br&max=12&apikey=${eaa6e3c172e18829f1abfb442deef235}`;
+        const url = `https://gnews.io/api/v4/search?q=${query}&lang=pt&country=br&max=12&apikey=${GNEWS_API_KEY}`;
+        console.log("URL FINAL:");
+        console.log(url);
+
 
         try {
             const response = await fetch(url);
 
             if (!response.ok) {
-                throw new Error("Erro na resposta da API");
+                const erroApi = await response.json();
+            
+                console.error("ERRO GNEWS:", erroApi);
+            
+                erro.textContent =
+                    erroApi.errors?.[0] ||
+                    "Erro ao carregar notícias.";
+            
+                erro.style.display = "block";
+                loading.style.display = "none";
+            
+                return;
             }
 
             const data = await response.json();
