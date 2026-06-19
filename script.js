@@ -562,7 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
         grid.innerHTML = "";
 
         const query = encodeURIComponent(termosBusca[estado]);
-        const url = `https://gnews.io/api/v4/search?q=${query}&lang=pt&country=br&max=12&apikey=${GNEWS_API_KEY}`;
+        const url = `https://gnews.io/api/v4/search?q=${query}&lang=pt&country=br&max=12&apikey=${eaa6e3c172e18829f1abfb442deef235}`;
 
         try {
             const response = await fetch(url);
