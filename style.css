@@ -53,6 +53,10 @@
     font-family: "Bricolage Grotesque", sans-serif;
 }
 
+.logo{
+    width: 200px;
+}
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
