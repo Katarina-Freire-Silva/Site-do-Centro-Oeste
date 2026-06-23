@@ -87,10 +87,9 @@ body {
     color: var(--cor-texto-escuro);
 }
 
-.pagina-interna {
+main.pagina-interna {
     padding: 8rem 0;
 }
-
 /* Header e Footer */
 
 header {
@@ -649,6 +648,17 @@ nav {
     color: var(--cor-areia);
 }
 
+#turismo-roteiros,
+#turismo-hospedagem{
+    width: 100%;
+}
+
+#turismo-roteiros,
+#turismo-hospedagem{
+    width: 100vw;
+    margin:0;
+}
+
 
 #turismo-roteiros {
     position: relative;
@@ -688,14 +698,14 @@ nav {
 }
 
 section {
-    width: 90%;
     align-items: center;
     margin: 0 auto;
 }
 
 #map{
-    width: 100%;
+    width: 90%;
     height:550px;
+    margin: 0 auto 5rem auto;
 
     border-radius:24px;
 
@@ -770,7 +780,10 @@ section {
 
 .destinos-container{
     position: relative;
-    width: 100%;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .destino-btn{
@@ -834,13 +847,9 @@ section {
     display: none;
 }
 
-.destino-card {
-    flex: 0 0 300px;
-}
-
 .destino-card{
     background:white;
-
+    flex: 0 0 300px;
     border-radius:5px;
 
     overflow:hidden;
@@ -906,6 +915,248 @@ section {
     outline: 3px solid var(--cor-laranja);
 }
 
+
+/* ------------------------------- CSS DO TURISMO - HOSPEDAGEM ------------------------------- */
+
+#turismo-hospedagem{
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111 0%,
+            #1b1b1b 40%,
+            #242424 100%
+        );
+
+    padding: 8rem 0;
+
+    overflow: hidden;
+}
+
+#turismo-hospedagem::before{
+    content: "";
+
+    position: absolute;
+
+    top: -200px;
+    left: -200px;
+
+    width: 500px;
+    height: 500px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(194,155,68,.18) 0%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+#turismo-hospedagem::after{
+    content: "";
+
+    position: absolute;
+
+    bottom: -250px;
+    right: -250px;
+
+    width: 600px;
+    height: 600px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(86,102,56,.20) 0%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.hospedagem-estados{
+    width: 90%;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 2rem;
+
+    position: relative;
+    z-index: 2;
+}
+
+.estado-hospedagem{
+    background:
+        rgba(255,255,255,.05);
+
+    backdrop-filter: blur(12px);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 24px;
+
+    padding: 2rem;
+
+    transition: .4s;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+}
+
+.estado-hospedagem:hover{
+    transform: translateY(-10px);
+
+    border-color:
+        rgba(194,155,68,.3);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.35);
+}
+
+.estado-hospedagem h3{
+    text-align: center;
+
+    color: var(--cor-mostarda-claro);
+
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+
+    padding-bottom: 1rem;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.1);
+}
+
+.hotel-card{
+    position: relative;
+
+    padding: 1.3rem;
+
+    border-radius: 18px;
+
+    margin-bottom: 1rem;
+
+    transition: .35s;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.hotel-card:last-child{
+    margin-bottom: 0;
+}
+
+.hotel-card:hover{
+    transform: translateX(8px);
+}
+
+.hotel-card span{
+    display: inline-block;
+
+    margin-bottom: .7rem;
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.hotel-card h4{
+    color: white;
+
+    font-size: 1.05rem;
+
+    margin-bottom: .5rem;
+}
+
+.hotel-card p{
+    color: rgba(255,255,255,.75);
+
+    font-size: .92rem;
+
+    line-height: 1.6;
+}
+
+/* LUXO */
+
+.hotel-card.luxo{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(194,155,68,.20),
+            rgba(194,155,68,.08)
+        );
+
+    border:
+        1px solid rgba(194,155,68,.35);
+}
+
+.hotel-card.luxo span{
+    color: #ffd36a;
+}
+
+/* INTERMEDIÁRIO */
+
+.hotel-card.medio{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid rgba(255,255,255,.12);
+}
+
+.hotel-card.medio span{
+    color: #e7e7e7;
+}
+
+/* ECONÔMICO */
+
+.hotel-card.economico{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(86,102,56,.25),
+            rgba(86,102,56,.08)
+        );
+
+    border:
+        1px solid rgba(86,102,56,.35);
+}
+
+.hotel-card.economico span{
+    color: #9fcb6a;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+    #turismo-hospedagem{
+        padding: 6rem 0;
+    }
+
+    #turismo-hospedagem .titulo-secao h2{
+        font-size: 6rem;
+    }
+
+    .hospedagem-estados{
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ------------------------------- CSS DO RÁDIO ------------------------------- */
 

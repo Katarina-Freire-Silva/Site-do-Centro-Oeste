@@ -135,6 +135,7 @@ if(slidesHistoria.length){
 
 /* ---------------------------- SCRIPT DO TURISMO -----------------------------*/
 
+let localUsuario = null;
 
 // ===== MAPA INTERATIVO (Leaflet) =====
 document.addEventListener("DOMContentLoaded", () => {
@@ -173,7 +174,25 @@ document.addEventListener("DOMContentLoaded", () => {
             const zoom = parseInt(card.dataset.zoom) || 13;
             const titulo = card.querySelector("h4").textContent;
 
-            irParaLocal(lat, lng, zoom, titulo);
+            let textoPopup = titulo;
+
+            if(localUsuario){
+
+                const distancia = calcularDistancia(
+                    localUsuario.lat,
+                    localUsuario.lng,
+                    lat,
+                    lng
+                );
+
+                textoPopup = `
+                    <strong>${titulo}</strong><br>
+                    Distância da sua região:<br>
+                    ${distancia.toFixed(0)} km
+                `;
+            }
+
+            irParaLocal(lat, lng, zoom, textoPopup);
 
             // Marca visualmente o card selecionado
             cards.forEach((c) => c.classList.remove("active"));
@@ -186,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchBtn = document.getElementById("map-search-btn");
 
     async function buscarLocal() {
+        
         const query = searchInput.value.trim();
         if (!query) return;
 
@@ -203,8 +223,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const lat = parseFloat(data[0].lat);
             const lng = parseFloat(data[0].lon);
+            localUsuario = {
+                lat,
+                lng,
+                nome: data[0].display_name
+            };
 
             irParaLocal(lat, lng, 13, data[0].display_name);
+
+            function calcularDistancia(lat1, lon1, lat2, lon2) {
+
+                const R = 6371;
+
+                const dLat = (lat2 - lat1) * Math.PI / 180;
+                const dLon = (lon2 - lon1) * Math.PI / 180;
+
+                const a =
+                    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                    Math.cos(lat1 * Math.PI / 180) *
+                    Math.cos(lat2 * Math.PI / 180) *
+                    Math.sin(dLon / 2) *
+                    Math.sin(dLon / 2);
+
+                const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+                return R * c;
+            }
 
             // Remove destaque de cards ao buscar manualmente
             cards.forEach((c) => c.classList.remove("active"));
@@ -222,20 +266,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const grid = document.querySelector(".destinos-grid");
+const btnProximoDestino = document.querySelector(".destino-proximo");
+const btnAnteriorDestino = document.querySelector(".destino-anterior");
 
-document.querySelector(".destino-proximo").onclick = () => {
-    grid.scrollBy({
-        left: 340,
-        behavior: "smooth"
-    });
-};
+if (grid && btnProximoDestino && btnAnteriorDestino) {
 
-document.querySelector(".destino-anterior").onclick = () => {
-    grid.scrollBy({
-        left: -340,
-        behavior: "smooth"
-    });
-};
+    btnProximoDestino.onclick = () => {
+        grid.scrollBy({
+            left: 340,
+            behavior: "smooth"
+        });
+    };
+
+    btnAnteriorDestino.onclick = () => {
+        grid.scrollBy({
+            left: -340,
+            behavior: "smooth"
+        });
+    };
+
+}
 
 
 /* ----------------------------- SCRIPT DO RÁDIO ------------------------------*/
@@ -410,6 +460,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const audioPlayer = document.getElementById("audio-player");
     if (!audioPlayer) return;
 
+    const disco = document.getElementById("disco");
+
+
     audioPlayer.addEventListener("play", () => {
         atualizarIconePlay(true);
 
@@ -417,6 +470,7 @@ document.addEventListener("DOMContentLoaded", () => {
             disco.classList.add("tocando");
         }
     });
+
 
     audioPlayer.addEventListener("pause", () => {
         atualizarIconePlay(false);
@@ -430,7 +484,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const CHAVE_TEMPO = "radio_tempoAtual";
 
     // ----- Elementos da interface (só existem na página radio.html) -----
-    const disco = document.getElementById("disco");
     const infoTitulo = document.getElementById("info-titulo");
     const infoArtista = document.getElementById("info-artista");
     const infoAno = document.getElementById("info-ano");
