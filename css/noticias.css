@@ -1,7 +1,7 @@
 /* ------------------------------ CSS DAS NOTÍCIAS ------------------------------*/
 
 
-#noticias{
+.noticias{
     width: 100%;
 
     position: relative;
@@ -19,7 +19,7 @@
     overflow: hidden;
 }
 
-#noticias::before{
+.noticias::before{
     content: "";
 
     position: absolute;
@@ -33,7 +33,7 @@
     pointer-events: none;
 }
 
-#noticias::after{
+.noticias::after{
     content: "";
 
     position: absolute;
@@ -54,7 +54,7 @@
     pointer-events: none;
 }
 
-#noticias .titulo-secao{
+.noticias .titulo-secao{
     text-align: center;
     max-width: 1000px;
     margin: 0 auto 4em auto;
@@ -492,12 +492,12 @@
    PROTEÇÃO CONTRA CONFLITOS COM OUTRAS PÁGINAS
 ========================================================== */
 
-#noticias{
+.noticias{
     position: relative;
     z-index: 1;
 }
 
-#noticias *{
+.noticias *{
     box-sizing: border-box;
 }
 
@@ -508,7 +508,7 @@
     z-index: 2;
 }
 
-#noticias{
+.noticias{
     overflow-x: hidden;
 }
 
