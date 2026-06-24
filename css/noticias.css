@@ -310,12 +310,13 @@
 }
 
 
-.noticias-jornal-container {
+.noticias-jornal-container{
     position: relative;
     width: 90%;
     margin: 0 auto;
     max-width: 1470px;
-    min-height: 700px;
+
+    height: 800px; /* altura fixa */
     overflow: hidden;
 }
 
@@ -454,8 +455,10 @@
 .historia-indicadores{
     position: absolute;
 
-    bottom: 40px;
-    left: 50%;
+    bottom: 20px; /* mais próximo da imagem */
+    
+    /* em vez de centralizar o slider inteiro */
+    left: calc((100% - 80px - 40%) / 2 + 20%);
 
     transform: translateX(-50%);
 
@@ -471,7 +474,7 @@
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.25);
+    background: rgba(0,0,0,.25);
 
     cursor: pointer;
 
@@ -507,4 +510,115 @@
 
 #noticias{
     overflow-x: hidden;
+}
+
+
+/* API DE CLIMA E MOEDA*/
+/* ===================== PAINEL DASHBOARD ===================== */
+
+.painel-dados{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    width:95%;
+    margin:40px auto 60px auto;
+    margin-block-end: 200px;
+}
+
+.painel-clima,
+.painel-moedas{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card-info{
+    width:280px;
+    padding:18px;
+    border-radius:14px;
+
+    background: rgba(255,255,255,.06);
+    backdrop-filter: blur(12px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:var(--cor-areia);
+
+    transition:.3s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.card-info:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.09);
+}
+
+/* TITULOS */
+.card-info h3{
+    color:var(--cor-verde-oliva);
+    margin-bottom:10px;
+    font-size:1rem;
+}
+
+/* ===================== CLIMA ===================== */
+
+.card-info.clima h4{
+    margin:5px 0;
+    font-size:1.1rem;
+}
+
+.temperatura-atual{
+    font-size:2.2rem;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.info-adicional-clima{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+    font-size:.85rem;
+    opacity:.9;
+    margin-top:10px;
+}
+
+.linha{
+    height:1px;
+    background:rgba(255,255,255,.15);
+    margin:12px 0;
+}
+
+.previsao-3-dias{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    font-size:.8rem;
+}
+
+.dia-previsao{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:6px;
+}
+
+/* ===================== MOEDAS ===================== */
+
+.moeda .moeda-icone{
+    font-size:1.4rem;
+    margin-bottom:5px;
+}
+
+.cotacao-valor{
+    font-size:1.3rem;
+    font-weight:bold;
+    margin-top:5px;
+}
+
+.subtitulo-card{
+    opacity:.8;
+    font-size:.85rem;
 }

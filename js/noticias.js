@@ -561,6 +561,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ----- Carrega notícias da região inteira ao abrir a página -----
     buscarNoticias("centro-oeste");
+    carregarClima("Goiás", "Goiânia", -16.679915550000000, -49.255011680000000, "clima-goiania");
+    carregarClima("Mato Grosso", "Cuiabá", -15.599227400000000, -56.095052600000000, "clima-cuiaba");
+    carregarClima("Mato Grosso do Sul", "Campo Grande", -20.442813945200000, -54.646345672800000, "clima-campo-grande");
 });
 
 /* ---------------------- SLIDER REPORTAGENS ---------------------- */
@@ -641,3 +644,106 @@ if (cardsJornal.length > 0) {
     });
 
 }
+
+/* ---------------------------- SCRIPT DO CLIMA ---------------------------*/
+
+function obterEmojiClima(codigo) {
+    if (codigo === 0) return "☀️";
+    if ([1, 2, 3].includes(codigo)) return "⛅";
+    if ([45, 48].includes(codigo)) return "🌫️";
+    if ([51, 53, 55, 56, 57].includes(codigo)) return "🌦️";
+    if ([61, 63, 65, 66, 67].includes(codigo)) return "🌧️";
+    if ([71, 73, 75, 77].includes(codigo)) return "❄️";
+    if ([80, 81, 82].includes(codigo)) return "🌦️";
+    if ([95, 96, 99].includes(codigo)) return "⛈️";
+    return "🌤️";
+}
+
+async function carregarClima(estado, cidade, lat, lon, elementoId) {
+    try {
+        const resposta = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=America/Sao_Paulo`
+        );
+
+        const dados = await resposta.json();
+
+        const emojiAtual = obterEmojiClima(dados.current.weather_code);
+
+        const diasSemana = ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+
+        let previsaoHTML = "";
+
+        for (let i = 1; i <= 3; i++) {
+            const data = new Date(dados.daily.time[i] + "T12:00:00");
+            const diaSemana = diasSemana[data.getDay()];
+            const emojiDia = obterEmojiClima(dados.daily.weather_code[i]);
+
+            previsaoHTML += `
+                <div class="dia-previsao">
+                    <span>${diaSemana}</span>
+                    <span>${emojiDia}</span>
+                    <span>↑ ${dados.daily.temperature_2m_max[i]}°</span>
+                    <span>↓ ${dados.daily.temperature_2m_min[i]}°</span>
+                </div>
+            `;
+        }
+
+        document.getElementById(elementoId).innerHTML = `
+            <h3>${estado}</h3>
+            <h4>${cidade}</h4>
+
+            <div class="temperatura-atual">
+                ${emojiAtual} ${dados.current.temperature_2m}°
+            </div>
+
+            <div class="info-adicional-clima">
+                <p>💧 ${dados.current.relative_humidity_2m}%</p>
+                <p>💨 ${dados.current.wind_speed_10m} km/h</p>
+            </div>
+
+            <div class="linha"></div>
+
+            <div class="previsao-3-dias">
+                ${previsaoHTML}
+            </div>
+        `;
+    } catch (error) {
+        console.error("Erro clima:", error);
+    }
+}
+
+/* ---------------------------- SCRIPT DA MOEDA ---------------------------*/
+
+async function carregarCotacoes() {
+    try {
+        const resposta = await fetch(
+            "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL"
+        );
+
+        const dados = await resposta.json();
+
+        document.getElementById("dolar").innerHTML = `
+            <span class="moeda">$</span>
+            <p class="subtitulo-card">Dólar</p>
+            <p class="cotacao-valor">R$ ${Number(dados.USDBRL.bid).toFixed(2)}</p>
+        `
+
+        document.getElementById("euro").innerHTML = `
+            <span class="moeda">€</span>
+            <p class="subtitulo-card">Euro</p>
+            <p class="cotacao-valor">R$ ${Number(dados.EURBRL.bid).toFixed(2)}</p>
+        `
+
+        document.getElementById("libra").innerHTML = `
+            <span class="moeda">£</span>
+            <p class="subtitulo-card">Libra Esterlina</p>
+            <p class="cotacao-valor">R$ ${Number(dados.GBPBRL.bid).toFixed(2)}</p>
+        `
+
+    } catch (error) {
+        console.error("Erro ao carregar cotações:", error);
+    }
+}
+
+carregarCotacoes();
+
