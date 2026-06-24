@@ -9,7 +9,7 @@
 </head>
 <body class="pagina-interna">    
     <header>
-        <img src="../image/logo.png" alt="Logo" class="logo">
+        <img src="../image/logo-preta.png" alt="Logo" class="logo">
         <nav>            
             <div class="nav-item dropdown">
                 <button class="dropdown-toggle">
@@ -83,7 +83,14 @@
     </header>
 
     <section id="noticias">
-        <h2>Notícias do Centro-Oeste</h2>
+        <div class="titulo-secao">
+            <span class="subtitulo"> CONHEÇAS OS </span>
+            <h2> Notícias do Centro-Oeste </h2>
+
+            <p>
+                Fique por dentro das notícas do dia, temos muitas novidades para você, mas não se esqueça de ver as nossas notícias especias, preparadas com carinho para que você descubrar muito mais do que vem acontecendo por aí. Fique ligado nas notícias do Panorama Centro-Oeste.
+            </p>
+        </div>
 
         <!-- Filtro por região/estado -->
         <div class="filtro-noticias">
@@ -101,6 +108,90 @@
             <button class="filtro-estado" data-estado="meioAmbiente" id="noticias-meioAmbiente">Meio Ambiente</button>
             <button class="filtro-estado" data-estado="agropecuaria" id="noticias-agropecuaria">Agropecuária</button>
         </div>
+
+        <!-- NOTÍCIAS DO JORNAL -->
+        <section class="jornal-noticias">
+
+            <div class="secao-titulo">
+                <span>Produção Exclusiva</span>
+                <h3>Reportagens do Panorama Centro-Oeste</h3>
+            </div>
+
+            <div class="slider-noticias-jornal">
+
+                <button class="slider-btn prev">
+                    ❮
+                </button>
+
+                <div class="noticias-jornal-container">
+
+                    <article
+                        class="noticia-jornal-card"
+                        data-categoria="economia"
+                        data-estado="go">
+
+                        <div class="noticia-jornal-imagem">
+
+                            <img src="../image/noticias/goias-restaurante.jpg" alt="">
+
+                            <div class="tag-estado">
+                                GOIÁS
+                            </div>
+
+                        </div>
+
+                        <div class="noticia-jornal-info">
+
+                            <div class="cabecalho-jornal">
+
+                                <img
+                                    src="../image/logo-preta.png"
+                                    alt="Panorama Centro-Oeste"
+                                    class="logo-jornal-noticia">
+
+                                <span class="categoria-noticia">
+                                    Cultura e Gastronomia
+                                </span>
+
+                            </div>
+
+                            <h2>
+                                Goiânia conquista o título de melhor restaurante italiano do Brasil
+                            </h2>
+
+                            <p class="noticia-jornal-meta">
+                                23 de Junho de 2026
+                            </p>
+
+                            <p class="noticia-jornal-resumo">
+                                Goiânia ganhou destaque nacional após o restaurante
+                                1929 Trattoria Moderna, comandado pelo chef Ian Baiocchi,
+                                ser eleito o melhor restaurante de comida italiana do Brasil
+                                em uma das principais premiações gastronômicas do país.
+                            </p>
+
+                            <a
+                                href="https://www.maisgoias.com.br/divirta-se/gastronomia/goiania-tem-o-melhor-resturante-de-comida-italiana-do-brasil-veja/"
+                                target="_blank"
+                                class="btn-reportagem">
+
+                                Ler reportagem completa
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <button class="slider-btn next">
+                    ❯
+                </button>
+
+            </div>
+
+        </section>
 
         <div id="noticias-loading" class="noticias-loading">Carregando notícias...</div>
         <div id="noticias-grid" class="noticias-grid"></div>
