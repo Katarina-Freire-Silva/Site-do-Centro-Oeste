@@ -352,6 +352,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* ---------------- VER MAIS DESTINOS ---------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnVerMais = document.getElementById("btnVerMais");
+    const destinosGrid = document.querySelector(".destinos-grid");
+    const destinosContainer = document.querySelector(".destinos-container");
+
+    if (!btnVerMais || !destinosGrid || !destinosContainer) return;
+
+    let expandido = false;
+
+    btnVerMais.addEventListener("click", () => {
+
+        expandido = !expandido;
+
+        destinosGrid.classList.toggle("expandido");
+        destinosContainer.classList.toggle("expandido");
+
+        btnVerMais.textContent = expandido
+            ? "Ver menos destinos"
+            : "Ver mais destinos";
+
+    });
+
+});
+
 /* ----------------------------- SCRIPT DO RÁDIO ------------------------------*/
 
 // ===== BANCO DE MÚSICAS (compartilhado entre todas as páginas) =====

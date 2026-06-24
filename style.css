@@ -500,8 +500,6 @@ nav {
     padding: 5%;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 }
 
 .subtitulo{
@@ -518,6 +516,18 @@ nav {
     margin-block: 40px;
     text-shadow: 0 4px 20px rgba(0,0,0,.6);
 }
+
+.pequeno {
+    font-family: "Six Caps", sans-serif;
+    font-size: 5rem;
+    color: var(--cor-areia);
+    line-height: 0.9;
+    margin-inline-start: 10%;
+    margin-block-start: 5%;
+    margin-block-end: 2%;
+    text-shadow: 0 4px 20px rgba(0,0,0,.6);
+}
+
 
 .titulo-secao p{
     line-height: 1.8;
@@ -659,16 +669,70 @@ nav {
     margin:0;
 }
 
+#turismo-roteiros .titulo-secao{
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 4rem auto;
+}
 
-#turismo-roteiros {
+#turismo-hospedagem.titulo-secao,
+#turismo-roteiros .titulo-secao p{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+#turismo-roteiros{
     position: relative;
+
     background:
         linear-gradient(
             180deg,
-            var(--cor-areia) 0%,
-            var(--cor-mostarda-claro) 100%
+            #111111 0%,
+            #1b1b1b 40%,
+            #242424 100%
         );
+
+    padding: 8rem 0;
+
+    overflow: hidden;
 }
+
+#turismo-roteiros::before{
+    content: "";
+
+    position: absolute;
+
+    top: -200px;
+    left: -200px;
+
+    width: 500px;
+    height: 500px;
+
+    pointer-events: none;
+}
+
+#turismo-roteiros::after{
+    content: "";
+
+    position: absolute;
+
+    bottom: -250px;
+    right: -250px;
+
+    width: 600px;
+    height: 600px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(86,102,56,.20) 0%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
 
 .turismo-header{
     text-align:center;
@@ -698,13 +762,14 @@ nav {
 }
 
 section {
+    width: 100%;
     align-items: center;
     margin: 0 auto;
 }
 
 #map{
     width: 90%;
-    height:550px;
+    height:700px;
     margin: 0 auto 5rem auto;
 
     border-radius:24px;
@@ -916,6 +981,48 @@ section {
 }
 
 
+.ver-mais-container{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.btn-ver-mais{
+    color: var(--cor-areia);
+    background: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 2rem;
+    border:none;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-ver-mais:hover{
+ transform:translateY(-3px);
+
+    background: rgba(255,255,255,.05);
+
+    border-color: rgba(255,255,255,.4);
+}
+
+.destinos-grid.expandido{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap:25px;
+
+    overflow:visible;
+}
+
+.destinos-container.expandido .destino-btn{
+    display:none;
+}
+
 /* ------------------------------- CSS DO TURISMO - HOSPEDAGEM ------------------------------- */
 
 #turismo-hospedagem{
@@ -944,13 +1051,6 @@ section {
 
     width: 500px;
     height: 500px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(194,155,68,.18) 0%,
-            transparent 70%
-        );
 
     pointer-events: none;
 }
@@ -1006,7 +1106,8 @@ section {
 }
 
 .imagem-estado{
-    min-height: 650px;
+    height: 100%;
+    max-height: 600px;
     border-radius: 24px;
     overflow: hidden;
 
@@ -1039,6 +1140,7 @@ section {
 
 
 .estado-hospedagem{
+    height: 680px;
     background:rgba(255,255,255,.05);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255,255,255,.08);
@@ -1074,7 +1176,8 @@ section {
 }
 
 .hotel-lista{
-    height: calc(650px - 120px);
+    flex: 1;
+    min-height: 0;
     overflow-y: auto;
     width: 90%;
     margin: 0 auto; 
@@ -1247,6 +1350,59 @@ section {
 }
 
 
+/* HERO APENAS DA ABERTURA */
+
+.hero-turismo{
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 8%;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.65)
+        ),
+        url("./image/fundo-turismo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+.hero-turismo::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(194,155,68,.15),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+.hero-turismo .titulo-secao{
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    text-align: center;
+}
+
+
 /* ------------------------------- CSS DO RÁDIO ------------------------------- */
 
 body.pagina-interna {
@@ -1291,6 +1447,11 @@ body.pagina-interna::before {
     position: relative;
     text-align: center;
     padding: 80px 0;
+    width: 100%;
+}
+
+main {
+    min-height: calc(100vh - var(--altura-header) - var(--altura-footer));
 }
 
 #radio::before{
@@ -1317,12 +1478,16 @@ body.pagina-interna::before {
 }
 
 .radio-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-}
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 120px;
+}
 /* ==================================================
    DISCO
 ================================================== */
@@ -1332,16 +1497,16 @@ body.pagina-interna::before {
 }
 
 .disco-wrapper {
-    width: 550px;
-    height: 550px;
+    width: 710px;
+    height: 710px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .disco {
-    width: 500px;
-    height: 500px;
+    width: 650px;
+    height: 650px;
     border-radius: 50%;
 
     background:
@@ -1450,10 +1615,10 @@ body.pagina-interna::before {
 ================================================== */
 
 .radio-filtros {
-    flex: 1 1 420px;
-    max-width: 550px;
+    flex: 1;
+    max-width: 600px;
+    min-width: 500px;
 }
-
 .filtro-grupo {
     gap: 12px;
     padding: 20px;
