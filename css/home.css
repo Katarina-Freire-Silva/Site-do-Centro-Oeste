@@ -1,4 +1,26 @@
 /* ------------------------------- CSS DA HOME --------------------------------*/
+body.pagina-interna {
+    position: relative;
+    background: transparent;
+}
+
+body.pagina-interna::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.20),
+            rgba(0,0,0,0.35)
+        );
+
+    z-index: -1;
+    pointer-events: none;
+}
 
 
 .abertura-container {
@@ -12,6 +34,7 @@
     text-align: center;
     max-width: 1000px;
     margin: 0 auto 4em auto;
+    padding: 5%;
 }
 
 
@@ -199,12 +222,13 @@
 
 .historia-anterior{
     left: 30px;
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
 
 }
 
 .historia-proximo{
     right: 30px;
+    transform: translateY(-50%);
 }
 
 /* Indicadores */
@@ -244,9 +268,7 @@
 .home-centro-oeste{
     display: flex;
     flex-direction: column;
-    padding: 5%;
     width: 100%;
-    background-color: var(--cor-texto-escuro);
     background:
         linear-gradient(
             to bottom,
@@ -271,7 +293,7 @@
     align-items: center;
     justify-content: space-between;
 
-    min-height: 100vh;
+    height: 100vh;
     padding: 0 8%;
 
     overflow: hidden;
@@ -284,7 +306,31 @@
     position: absolute;
     inset: 0;
 
-    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    opacity: .08;
+
+    z-index: 0;
+}
+
+.estado-goias::before{
+    background-image: url("../image/bandeira-go.jpg");
+}
+
+.estado-mt::before{
+    background-image: url("../image/bandeira-mt.jpg");
+}
+
+.estado-ms::before{
+    background-image: url("../image/bandeira-ms.jpg");
+}
+
+.estado-imagem,
+.estado-texto{
+    position: relative;
+    z-index: 2;
 }
 
 .estado-item::after{
@@ -316,12 +362,24 @@
 }
 
 
+.estado-imagem{
+    flex: 0 0 40%; /* ocupa cerca de 35% da largura */
+    max-width: auto; /* limita o tamanho máximo */
+}
+
 .estado-imagem img{
     width: 100%;
     display: block;
-    border-radius: 20px;
-
     transition: .6s;
+}
+
+.estado-texto{
+    flex: 1;
+    max-width: 700px; /* impede linhas gigantes */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .estado-item:hover img{
@@ -339,20 +397,18 @@
 .estado-texto span{
     color: var(--cor-verde-oliva);
     letter-spacing: 3px;
-    font-size: .9em;
+    font-size: 1.1em;
 }
 
 .estado-texto h3{
     font-family: "Six Caps", sans-serif;
-    font-size: 8em;
+    font-size: 9em; /* antes era 8em */
     line-height: .9;
     color: var(--cor-areia);
 }
 
 .estado-texto p{
     color: var(--cor-areia);
-    line-height: 1.8;
-    font-size: 1em;
+    line-height: 2;
+    font-size: 1.2em; /* antes era 1em */
 }
-
-
