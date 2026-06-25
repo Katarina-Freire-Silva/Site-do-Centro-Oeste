@@ -1,6 +1,5 @@
 /* ------------------------------ CSS DOS COSTUMES ------------------------------*/
 
-/* ===================== SEÇÃO PRINCIPAL ===================== */
 
 .costumes {
     width: 100%;
@@ -36,6 +35,29 @@
     max-width: 1000px;
     margin: 0 auto 4em auto;
 }
+
+.secao-titulo{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin-inline: 150px;
+    gap:4px;
+    margin-bottom:40px;
+}
+
+.secao-titulo span{
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    line-height: 1;
+    color: var(--cor-laranja);
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .9em;
+}
+
 
 /* ===================== GÍRIAS ===================== */
 
@@ -300,4 +322,22 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
     margin: 0 auto;
+}
+
+.tirinha-container{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tirinha-girias{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    border-radius: 20px;
+    display: block;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }

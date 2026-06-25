@@ -195,11 +195,9 @@
 
 .slider-api-wrapper{
     position: relative;
-
     width: 95%;
     max-width: 1600px;
-
-    margin: 0 auto 80px auto;
+    margin: 80px auto 80px auto;
 }
 
 .slider-api-wrapper .historia-btn{
@@ -232,9 +230,20 @@
     visibility: visible;
 }
 
-.jornal-noticias {
+.jornal-noticias{
     margin-bottom: 100px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.08),
+            rgba(0,0,0,.22)
+        );
+
+    padding: 100px 0;
+    position: relative;
 }
+
 
 .logo-jornal-noticia {
     width: 20%;
@@ -622,3 +631,4 @@
     opacity:.8;
     font-size:.85rem;
 }
+
