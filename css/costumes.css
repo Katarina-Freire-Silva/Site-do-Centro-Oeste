@@ -326,18 +326,70 @@
 
 .tirinha-container{
     grid-column: 1 / -1;
+
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 20px 0;
+    gap: 20px;
+
+    margin: 30px 0;
 }
 
-.tirinha-girias{
+.tirinha-slider{
+    position: relative;
+
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    max-width: 650px;
+    height: 350px;
 
+    overflow: hidden;
     border-radius: 20px;
-    display: block;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.tirinha-slide{
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.tirinha-slide.ativo{
+    opacity: 1;
+}
+
+.tirinha-btn{
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    transition: .3s;
+}
+
+.tirinha-btn:hover{
+    background: rgba(86,102,56,.8);
+    transform: scale(1.08);
 }
