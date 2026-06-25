@@ -180,25 +180,43 @@ Responsável pela obtenção das notícias exibidas em tempo real.
 
 ### História e Cultura do Centro-Oeste
 
-* [INSERIR REFERÊNCIA]
-* [INSERIR REFERÊNCIA]
-* [INSERIR REFERÊNCIA]
+* [https://brasilescola.uol.com.br/brasil/aspectos-culturais-regiao-centrooeste.htm]
+* [https://www.todamateria.com.br/lendas-da-regiao-centro-oeste/]
+
 
 ### Turismo
 
-* [INSERIR REFERÊNCIA]
-* [INSERIR REFERÊNCIA]
+* https://pnchapadadosveadeiros.com.br
+* https://www.chapadadosguimaraes.mt.gov.br/Turismo/Atrativos-Turistico/16/
+* https://bonitoecotrip.com.br/tudo-sobre-bonito-ms/?gad_source=1&gad_campaignid=23750842529&gbraid=0AAAABDWmtzYUymNumOKti51ZYnl5QzEbu&gclid=CjwKCAjwgO7RBhBKEiwAZNP85v-AkP42GZeNIHWlFTfc_7Mrj-mddFOzJM6ab3oSKFSB-7Z-ig34fxoC9PEQAvD_BwE
+* https://h2obonito.com.br/pantanal/?utm_source=GoogleAds&utm_medium=Search&utm_campaign=Pantanal&utm_content=LPPantanal&utm_term=pantanal%20turismo&ad_id=creative&gad_source=1&gad_campaignid=23822760361&gbraid=0AAAAACplSNVlzXpk4qELclYcz1Iu5JSiD&gclid=CjwKCAjwgO7RBhBKEiwAZNP85tmT3ivUX8_vuXssgaZ1-9ERVfAsYpnBGyxTvRGs0PHTWhGjnojZLBoC7x4QAvD_BwE
+* https://guia.melhoresdestinos.com.br/praca-dos-tres-poderes-brasilia.html
 
 ### Notícias Regionais
 
-* [INSERIR REFERÊNCIA]
-* [INSERIR REFERÊNCIA]
-* [INSERIR REFERÊNCIA]
+* https://www.maisgoias.com.br/divirta-se/gastronomia/goiania-tem-o-melhor-resturante-de-comida-italiana-do-brasil-veja/
+* https://www.maisgoias.com.br/divirta-se/lazer/festas-juninas-em-goiania-veja-a-lista-com-os-arraias-para-curtir/
+* https://www.maisgoias.com.br/cidades/goiania/estudante-de-12-anos-recebe-alta-apos-acidente-com-van-escolar-em-goias/
+* https://www.maisgoias.com.br/cidades/rio-verde/homem-ateia-fogo-na-casa-da-ex-apos-15-dias-de-relacionamento-em-rio-verde-video/
+* https://www.maisgoias.com.br/cidades/frente-fria-ameniza-estiagem-em-goias-enquanto-el-nino-preocupa-autoridades-e-produtores-rurais/
+* https://g1.globo.com/mt/mato-grosso/noticia/2026/06/14/entenda-o-que-falta-para-o-primeiro-beato-de-mato-grosso-se-tornar-santo.ghtml
+* https://g1.globo.com/mt/mato-grosso/noticia/2026/06/14/crianca-e-reanimada-apos-ser-arremessada-de-moto-durante-acidente-em-sinop-mt.ghtml
+* https://g1.globo.com/mt/mato-grosso/noticia/2026/06/13/apos-73-anos-festa-de-santo-antonio-e-reconhecida-como-patrimonio-historico-de-mt-e-cidade-faz-16-dias-de-evento.ghtml
+* https://g1.globo.com/mt/mato-grosso/noticia/2026/06/12/justica-derruba-lei-que-proibia-participacao-de-atletas-trans-em-competicoes-femininas-em-cuiaba.ghtml
+* https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/06/13/com-ederson-no-banco-familia-e-moradores-de-campo-grande-vivem-expectativa-pela-estreia-do-brasil-na-copa.ghtml
+* https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/06/13/campo-grande-registra-mais-de-85-mm-de-chuva-e-lidera-acumulados-em-ms-neste-sabado.ghtml
+* https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/06/14/quer-adotar-um-pet-mais-de-50-caes-e-gatos-aguardam-uma-familia-em-feira-neste-domingo.ghtml
+* https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/06/13/campo-grande-tem-ruas-interditadas-no-fim-de-semana-por-jogos-da-copa-e-festas-juninas-veja-quais.ghtmL
+* https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/06/13/mato-grosso-do-sul-tera-chuva-forte-ventos-de-ate-60-kmh-e-frio-neste-fim-de-semana.ghtml
+* https://g1.globo.com/df/distrito-federal/o-que-fazer-no-distrito-federal/noticia/2026/06/12/copa-do-mundo-2026-veja-onde-assistir-ao-jogo-entre-brasil-e-marrocos-no-df.ghtml
+* https://g1.globo.com/df/distrito-federal/noticia/2026/06/11/copa-2026-servidores-do-gdf-tambem-poderao-encerrar-expediente-3-horas-antes-dos-jogos-do-brasil.ghtml
+* https://g1.globo.com/df/distrito-federal/noticia/2026/06/09/policia-prende-grupo-especializado-em-roubar-canetas-emagrecedoras-no-df-prejuizo-de-farmacias-chega-a-r-25-milhoes.ghtml
+* https://g1.globo.com/df/distrito-federal/noticia/2026/06/09/assessora-da-secretaria-de-seguranca-publica-do-df-e-presa-em-flagrante-com-drogas-dentro-do-carro.ghtml
 
 ### Costumes e Tradições
 
-* [INSERIR REFERÊNCIA]
-* [INSERIR REFERÊNCIA]
+* [https://madeinbrasilis.com.br/blog/girias-da-regiao-centro-oeste]
+* [https://www.agbt.com.br/blog/expressoes-regionais-como-surgiu-e-quais-sao/]
 
 ---
 
