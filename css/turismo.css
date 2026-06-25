@@ -17,7 +17,7 @@
 #turismo-roteiros .titulo-secao{
     text-align: center;
     max-width: 1000px;
-    margin: 0 auto 4em auto;
+    margin: 0 auto 64px auto;
 }
 
 #turismo-hospedagem.titulo-secao,
@@ -29,7 +29,6 @@
 
 #turismo-roteiros{
     position: relative;
-
     background:
         linear-gradient(
             180deg,
@@ -37,51 +36,40 @@
             #1b1b1b 40%,
             #242424 100%
         );
-
-    padding: 8em 0;
-
+    padding: 128px 0;
     overflow: hidden;
 }
 
 #turismo-roteiros::before{
     content: "";
-
     position: absolute;
-
     top: -200px;
     left: -200px;
-
     width: 500px;
     height: 500px;
-
     pointer-events: none;
 }
 
 #turismo-roteiros::after{
     content: "";
-
     position: absolute;
-
     bottom: -250px;
     right: -250px;
-
     width: 600px;
     height: 600px;
-
     background:
         radial-gradient(
             circle,
             rgba(86,102,56,.20) 0%,
             transparent 70%
         );
-
     pointer-events: none;
 }
 
 
 .turismo-header{
     text-align:center;
-    margin-bottom:4em;
+    margin-bottom:64px;
 }
 
 .turismo-header span{
@@ -92,7 +80,7 @@
 
 .turismo-header h2{
     font-family: "Six Caps", sans-serif;
-    font-size: 10em;
+    font-size: 160px;
     color: var(--cor-areia);
     line-height: 0.9;
     text-shadow: 0 4px 20px rgba(0,0,0,.6);
@@ -100,7 +88,7 @@
 }
 
 .turismo-header p{
-    font-size: 1em;
+    font-size: 16px;
     line-height: 1.8;
     max-width: 600px;
     margin: auto;
@@ -114,37 +102,25 @@
 #map{
     width: 90%;
     height:700px;
-    margin: 0 auto 5em auto;
-
+    margin: 0 auto 80px auto;
     border-radius:24px;
-
     overflow:hidden;
-
     border:4px solid rgba(255,255,255,.4);
-
     box-shadow:
         0 25px 60px rgba(0,0,0,.18);
-
-    margin-bottom:5em;
+    margin-bottom:80px;
 }
 
 .map-search{
     max-width:800px;
-    margin:0 auto 3em;
-
+    margin:0 auto 48px;
     display:flex;
     align-items:center;
-
     background:rgba(255,255,255,.7);
-
     backdrop-filter:blur(12px);
-
     border:1px solid rgba(255,255,255,.4);
-
     border-radius:60px;
-
     overflow:hidden;
-
     box-shadow:
         0 15px 35px rgba(0,0,0,.12);
 }
@@ -152,34 +128,22 @@
 
 .map-search input{
     flex:1;
-
     border:none;
-
     background:transparent;
-
-    padding:1.2em 2em;
-
-    font-size:1em;
-
+    padding:19px 32px;
+    font-size:16px;
     outline:none;
 }
 
 
 .map-search button{
     height:100%;
-
     border:none;
-
-    padding:1.2em 2.5em;
-
+    padding:19px 40px;
     background:var(--cor-verde-musgo);
-
     color:white;
-
     font-weight:700;
-
     cursor:pointer;
-
     transition:.3s;
 }
 
@@ -199,26 +163,18 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
     z-index: 20;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
     padding: 20px;
-
     cursor: pointer;
-
     color: white;
-    font-size: 2em;
-
+    font-size:32px;
     background: rgba(0,0,0,.3);
     backdrop-filter: blur(5px);
-
     border: 1px solid rgba(255,255,255,.15);
-
     transition: .3s;
 }
 
@@ -241,14 +197,10 @@
 .destinos-grid {
     display: flex;
     gap: 20px;
-
     overflow-x: auto;
     overflow-y: hidden;
-
     scroll-behavior: smooth;
-
     padding: 20px 0;
-
     scrollbar-width: none;
 }
 
@@ -260,13 +212,9 @@
     background:white;
     flex: 0 0 300px;
     border-radius:5px;
-
     overflow:hidden;
-
     transition:.4s;
-
     cursor:pointer;
-
     box-shadow:
         0 15px 35px rgba(0,0,0,.22);
 }
@@ -308,11 +256,9 @@
 }
 
 .destino-info h4{
-    font-size:0.9em;
-
+    font-size:14.4px;
     color:var(--cor-texto-escuro);
-
-    margin-bottom:.8em;
+    margin-bottom:12.8px;
 }
 
 .destino-info p {
@@ -336,9 +282,8 @@
     background: transparent;
     padding: 20px;
     border-radius: 5px;
-    font-size: 2em;
+    font-size:16px;
     border:none;
-    font-size:1em;
     font-weight:600;
     cursor:pointer;
     transition:.3s;
@@ -346,20 +291,15 @@
 
 .btn-ver-mais:hover{
  transform:translateY(-3px);
-
     background: rgba(255,255,255,.05);
-
     border-color: rgba(255,255,255,.4);
 }
 
 .destinos-grid.expandido{
     display:grid;
-
     grid-template-columns:
         repeat(auto-fit, minmax(280px, 1fr));
-
     gap:25px;
-
     overflow:visible;
 }
 
@@ -371,7 +311,6 @@
 
 #turismo-hospedagem{
     position: relative;
-
     background:
         linear-gradient(
             180deg,
@@ -379,44 +318,33 @@
             #1b1b1b 40%,
             #242424 100%
         );
-
-    padding: 8em 0;
-
+    padding:128px 0;
     overflow: hidden;
 }
 
 #turismo-hospedagem::before{
     content: "";
-
     position: absolute;
-
     top: -200px;
     left: -200px;
-
     width: 500px;
     height: 500px;
-
     pointer-events: none;
 }
 
 #turismo-hospedagem::after{
     content: "";
-
     position: absolute;
-
     bottom: -250px;
     right: -250px;
-
     width: 600px;
     height: 600px;
-
     background:
         radial-gradient(
             circle,
             rgba(86,102,56,.20) 0%,
             transparent 70%
         );
-
     pointer-events: none;
 }
 
@@ -425,13 +353,10 @@
 .hospedagem-tela{
     width: 90%;
     min-height: 100vh;
-
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3em;
-
+    gap:48px;
     align-items: center;
 
     position: relative;
